@@ -137,12 +137,12 @@ func rpmFindAndParseSpec(dir string) (RpmSpec, error) {
 		return RpmSpec{}, err
 	}
 
-	spec, err := rpmParseSpec(specfile)
+	spec, err := RpmParseSpec(specfile)
 	return spec, err
 }
 
 // Given a specfile parse and return fields from the file
-func rpmParseSpec(name string) (RpmSpec, error) {
+func RpmParseSpec(name string) (RpmSpec, error) {
 	if !util.Exists(name) {
 		return RpmSpec{}, errors.New("File: " + name + " not found")
 	}
@@ -157,7 +157,7 @@ func rpmParseSpec(name string) (RpmSpec, error) {
 	out, err := exec.Command("rpmspec", "-P", name).Output()
 	if err != nil {
 		// rpmspec will occasionally return errors, so ignore them
-		log.Printf("rpmParseSpec: ignoring error %s", err.Error())
+		log.Printf("RpmParseSpec: ignoring error %s", err.Error())
 		// return RpmSpec{}, err
 	}
 
