@@ -12,7 +12,7 @@ import (
 	"regexp"
 	"strings"
 
-	util "github.com/mcoops/rpmtools/internal"
+	util "github.com/sfowl/rpmtools/internal"
 )
 
 // RpmSpec is a reference to metadata about a src rpm, including info like

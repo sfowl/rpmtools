@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/mcoops/rpmtools"
+	"github.com/sfowl/rpmtools"
 )
 
 func main() {

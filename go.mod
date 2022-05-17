@@ -1,3 +1,3 @@
-module github.com/mcoops/rpmtools
+module github.com/sfowl/rpmtools
 
 go 1.16
